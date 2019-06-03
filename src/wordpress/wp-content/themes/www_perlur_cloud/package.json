@@ -17,6 +17,7 @@
   "homepage": "https://github.com/PERLUR/www_perlur_cloud",
   "devDependencies": {
     "bulma": "^0.7.5",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "image-maxsize-webpack-loader": "^1.1.1",

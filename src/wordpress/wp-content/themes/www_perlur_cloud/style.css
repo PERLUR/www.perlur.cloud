@@ -5,33 +5,3 @@ Description: Theme for PERLUR Group website
 Version: 0.0.1
 Tags: PERLUR Group
 */
-
-footer {
-  flex-shrink: 0;
-  padding: 1rem;
-  background-color: #286293;
-  width: 100%;
-}
-
-#site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-#site-content {
-  padding: 1rem 2rem;
-  flex: auto;
-}
-
-#site-content-full-width {
-  flex: auto;
-}
-
-#tab-content p {
-  display: none;
-}
-
-#tab-content p.is-active {
-  display: block;
-}

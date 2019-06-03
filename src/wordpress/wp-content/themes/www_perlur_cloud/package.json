@@ -1,0 +1,30 @@
+{
+  "name": "www_perlur_cloud",
+  "version": "0.0.1",
+  "description": "A WordPress theme for www.perlur.cloud based on the Bulma CSS framework.",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PERLUR/www_perlur_cloud.git"
+  },
+  "author": "Mark Stopka",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/PERLUR/www_perlur_cloud/issues"
+  },
+  "homepage": "https://github.com/PERLUR/www_perlur_cloud",
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "image-maxsize-webpack-loader": "^1.1.1",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+$green: #50B47F;
+$blue: #4EBABC;
+$gray: #E72D43;
+$violet : #674595;
+$red : #E72D43;
+
+$primary: $green;
+$title-color: $primary;
+$subtitle-color: $blue;
+
+// Navbar Variables
+$navbar-item-color: $green;
+
+@import "../../node_modules/bulma/bulma.sass";

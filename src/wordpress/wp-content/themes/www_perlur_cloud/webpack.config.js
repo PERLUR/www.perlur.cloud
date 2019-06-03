@@ -19,7 +19,7 @@ module.exports = {
         {
           from: './assets/images',
           to: 'images/',
-          test: /^(apple-touch-icon|favicon|mstile)-*\.png$/,
+          test: /^(apple-touch-icon|favicon|mstile)-.*\.png$/,
         },
         {
           from: './assets/images',

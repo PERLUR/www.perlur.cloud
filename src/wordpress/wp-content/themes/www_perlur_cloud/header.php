@@ -54,64 +54,7 @@
     <link rel="stylesheet"
           href="<?php echo get_bloginfo('template_directory'); ?>/dist/css/main.bundle.css"
     />
-    <script type="text/javascript">
-      'use strict';
-
-      document.addEventListener('DOMContentLoaded', function () {
-
-        // Dropdowns in navbar
-
-        var $dropdowns = getAll('.navbar-item.has-dropdown:not(.is-hoverable)');
-
-        if ($dropdowns.length > 0) {
-          $dropdowns.forEach(function ($el) {
-            $el.addEventListener('click', function (event) {
-              event.stopPropagation();
-              $el.classList.toggle('is-active');
-            });
-          });
-
-          document.addEventListener('click', function (event) {
-            closeDropdowns();
-          });
-        }
-
-        function closeDropdowns() {
-          $dropdowns.forEach(function ($el) {
-            $el.classList.remove('is-active');
-          });
-        }
-
-        // Close dropdowns if ESC pressed
-        document.addEventListener('keydown', function (event) {
-          var e = event || window.event;
-          if (e.keyCode === 27) {
-            closeDropdowns();
-          }
-        });
-
-        // Toggles
-
-        var $burgers = getAll('.burger');
-
-        if ($burgers.length > 0) {
-          $burgers.forEach(function ($el) {
-            $el.addEventListener('click', function () {
-              var target = $el.dataset.target;
-              var $target = document.getElementById(target);
-              $el.classList.toggle('is-active');
-              $target.classList.toggle('is-active');
-            });
-          });
-        }
-
-        // Functions
-
-        function getAll(selector) {
-          return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
-        }
-      });
-    </script>
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/bundle.js"></script>
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
     <?php wp_head(); ?>
 
@@ -125,7 +68,7 @@
             <!-- navbar items, navbar burger... -->
             <a href="<?php echo get_bloginfo('url'); ?>">
               <img class="navbar-item"
-                   src="<?php echo get_bloginfo('template_directory'); ?>/dist/images/perlur-logo-basic.png"
+                   src="<?php echo get_bloginfo('template_directory'); ?>/dist/images/perlur-logo-full-color_h100px.png"
                    style="height: 100px;"
               />
             </a>
@@ -149,16 +92,16 @@
                 );
               ?>
 
-              <a class="navbar-item" href="https://www.facebook.com/2ndlayer.eu/">
+              <a class="navbar-item" href="https://www.facebook.com/perlurgroup/">
                 <i class="fab fa-facebook-square title"></i>
               </a>
-              <a class="navbar-item" href="https://www.linkedin.com/company/2ndlayer/">
+              <a class="navbar-item" href="https://www.linkedin.com/company/perlur-group/">
                 <i class="fab fa-linkedin title"></i>
               </a>
-              <a class="navbar-item" href="https://github.com/2nd-Layer">
+              <a class="navbar-item" href="https://github.com/PERLUR/">
                 <i class="fab fa-github-square title"></i>
               </a>
-              <a class="navbar-item" href="https://www.youtube.com/channel/UCncyGaCH5emsxroa3-YIb_A/">
+              <a class="navbar-item" href="https://www.youtube.com/channel/UC8qtg-Ji67SwG4tysrgFYNQ/">
                 <i class="fab fa-youtube-square title"></i>
               </a>
             </div>

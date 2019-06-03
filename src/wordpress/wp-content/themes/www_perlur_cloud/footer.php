@@ -32,7 +32,7 @@
         </div>
         <div class="column has-text-centered is-one-fifth">
           <img 
-            src="<?php echo get_bloginfo('template_directory'); ?>/images/2nd-layer-logo-white.png"
+            src="<?php echo get_bloginfo('template_directory'); ?>/dist/images/perlur-logo-mono-white_h100px.png"
             style="height: 100px;" />
             <p class="has-text-white">
               2019 
@@ -40,7 +40,7 @@
                 if (date('Y') > 2019) {
                   echo ' - '.date('Y');
                 }
-              ?> © <strong class="has-text-white">2<sup>nd</sup> Layer</strong><br/>
+              ?> © <strong class="has-text-white">PERLUR Group</strong><br/>
               All rights reserved.
             </p>
         </div>

@@ -45,7 +45,7 @@
       $class_names = '';
 
       if (in_array('current-menu-item', $classes)) {
-        $class_names .= 'is-active';
+        $class_names .= 'is-active has-text-violet';
       }
 
       $button = sprintf("<a href='%s' class='navbar-item title is-4 is-marginless %s'>%s</a>", $url, $class_names, $item->title);

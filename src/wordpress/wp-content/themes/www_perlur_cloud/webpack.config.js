@@ -28,12 +28,7 @@ module.exports = {
         {
           from: './assets/images',
           to: 'images/',
-          test: /^(apple-touch-icon|favicon|mstile)-.*\.png$/,
-        },
-        {
-          from: './assets/images',
-          to: 'images/',
-          test: /^favicon\.ico$/,
+          ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png'],
         },
       ]
     ),

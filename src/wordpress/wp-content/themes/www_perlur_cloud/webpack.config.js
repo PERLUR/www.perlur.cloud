@@ -28,7 +28,7 @@ module.exports = {
         {
           from: './assets/images',
           to: 'images/',
-          ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png'],
+          ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
         },
       ]
     ),

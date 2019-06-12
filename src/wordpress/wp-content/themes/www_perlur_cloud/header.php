@@ -56,6 +56,16 @@
     />
     <script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/bundle.js"></script>
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103038680-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-103038680-6');
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics -->
     <!-- Facebook Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)

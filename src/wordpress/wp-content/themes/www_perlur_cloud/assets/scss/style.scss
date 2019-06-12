@@ -15,6 +15,7 @@ $subtitle-color: $blue;
 $navbar-item-color: $green;
 
 @import "../../node_modules/bulma/bulma.sass";
+@import "./bulma-megamenu.scss";
 
 footer {
   flex-shrink: 0;

@@ -54,7 +54,7 @@
     <link rel="stylesheet"
           href="<?php echo get_bloginfo('template_directory'); ?>/dist/css/main.bundle.css"
     />
-    <script src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/bundle.js"></script>
+    <script async src="<?php echo get_bloginfo('template_directory'); ?>/dist/js/bundle.js"></script>
     <link rel="preload" as="style" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103038680-6"></script>

@@ -30,6 +30,12 @@ footer {
   flex-direction: column;
 }
 
+#HeaderMenu {
+  .title.is-4 {
+    font-size: 1rem;
+  }
+}
+
 #site-content {
   padding: 1rem 2rem;
   flex: auto;
@@ -49,8 +55,4 @@ footer {
 
 .has-text-violet {
   color: $violet !important;
-}
-
-#HeaderMenu .title {
-    font-size: 1.0rem;
 }

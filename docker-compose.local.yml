@@ -4,7 +4,7 @@ services:
   # The reverse proxy service (Træfik)
   proxy:
     image: traefik:v1.1.0  # The official Traefik docker image
-    command:--docker  # Enables the web UI and tells Træfik to listen to docker
+    command: --docker  # Enables the web UI and tells Træfik to listen to docker
     deploy:
       replicas: 1
       restart_policy:

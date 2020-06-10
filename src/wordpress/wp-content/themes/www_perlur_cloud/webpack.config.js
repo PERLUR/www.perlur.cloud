@@ -23,7 +23,7 @@ module.exports = {
         filename: 'css/[name].bundle.css'
       }
     ),
-    new CopyWebpackPlugin(
+    new CopyWebpackPlugin({
       patterns: [
         {
           from: './assets/images',
@@ -31,7 +31,7 @@ module.exports = {
           ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
         },
       ]
-    ),
+    }),
     new WebpackImagesResizer(
       {
         src: './assets/images/perlur-logo-full-color.png',

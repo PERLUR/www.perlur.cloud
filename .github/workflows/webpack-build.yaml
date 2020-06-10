@@ -1,0 +1,30 @@
+on: 
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - 'master'
+
+strategy:
+  matrix:
+    node-version: [8.x, 10.x, 12.x]
+
+name: Test WebPack build
+
+jobs:
+  docker-build:
+    name: Build frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+        run: |
+          pushd src/wordpress/wp-content/themes/www_perlur_cloud/
+          npm install
+          npm run-script build
+          popd

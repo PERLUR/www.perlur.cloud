@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+        - name: Build assets
         run: |
           pushd src/wordpress/wp-content/themes/www_perlur_cloud/
           npm install

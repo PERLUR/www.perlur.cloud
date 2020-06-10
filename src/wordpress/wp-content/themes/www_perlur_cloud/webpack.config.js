@@ -27,8 +27,10 @@ module.exports = {
       patterns: [
         {
           from: './assets/images',
+          globOptions: {
+            ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
+          },
           to: 'images/',
-          ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
         },
       ]
     }),

@@ -23,16 +23,18 @@ module.exports = {
         filename: 'css/[name].bundle.css'
       }
     ),
-    new CopyWebpackPlugin(
-      [
+    new CopyWebpackPlugin({
+      patterns: [
         {
           from: './assets/images',
+          globOptions: {
+            ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
+          },
           to: 'images/',
-          ignore: ['perlur-logo-full-color.png','perlur-logo-mono-white.png','perlur-logo-mono-green.png'],
         },
       ]
-    ),
-    new WebpackImagesResizer(
+    }),
+/*    new WebpackImagesResizer(
       {
         src: './assets/images/perlur-logo-full-color.png',
         dest: 'images/perlur-logo-full-color_h100px.png'
@@ -49,7 +51,7 @@ module.exports = {
       {
         height: 100
       }
-    )
+    ) */
   ],
   module: {
     rules: [

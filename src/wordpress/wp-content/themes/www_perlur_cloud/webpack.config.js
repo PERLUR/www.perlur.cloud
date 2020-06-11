@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackImagesResizer = require('webpack-images-resizer');
+/* const WebpackImagesResizer = require('webpack-images-resizer'); */
 
 module.exports = {
   entry: './assets/js/index.js',

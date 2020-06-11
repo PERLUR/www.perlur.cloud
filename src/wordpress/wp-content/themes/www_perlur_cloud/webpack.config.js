@@ -34,7 +34,7 @@ module.exports = {
         },
       ]
     }),
-    new WebpackImagesResizer(
+/*    new WebpackImagesResizer(
       {
         src: './assets/images/perlur-logo-full-color.png',
         dest: 'images/perlur-logo-full-color_h100px.png'
@@ -51,7 +51,7 @@ module.exports = {
       {
         height: 100
       }
-    )
+    ) */
   ],
   module: {
     rules: [

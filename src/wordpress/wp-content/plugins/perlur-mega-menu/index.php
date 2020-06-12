@@ -35,6 +35,7 @@ class rc_perlur_mega_menu {
 
         $menu_item->is_mega_submenu_title = get_post_meta( $menu_item->ID, '_menu_item_is_mega_submenu_title', true );
         $menu_item->mega_menu_description = get_post_meta( $menu_item->ID, '_menu_item_mega_menu_description', true );
+        $menu_item->is_mega_menu_parent = get_post_meta( $menu_item->ID, '_menu_item_is_mega_menu_parent', true );
         $menu_item->is_mega_menu_item = get_post_meta( $menu_item->ID, '_menu_item_is_mega_menu_item', true );
 
         return $menu_item;
@@ -52,6 +53,7 @@ class rc_perlur_mega_menu {
         // Check if element is properly sent
         if ( is_bool( $_REQUEST['menu-item-is-mega-submenu-title']) 
         && is_bool( $_REQUEST['menu-item-is-mega-menu-item'] )
+        && is_bool( $_REQUEST['menu-item-is-mega-menu-parent'] )
         && is_bool( $_REQUEST['menu-item-mega-menu-description']) ) {
 
             $is_mega_submenu_title_value = $_REQUEST['menu-item-is-mega-submenu-title'][$menu_item_db_id];
@@ -62,6 +64,9 @@ class rc_perlur_mega_menu {
 
             $mega_menu_description_value = $_REQUEST['menu-item-mega-menu-description'][$menu_item_db_id];
             update_post_meta( $menu_item_db_id, '_menu_item_mega_menu_description', $mega_menu_description_value );
+
+            $is_mega_menu_parent_value = $_REQUEST['menu-item-is-mega-menu-parent'][$menu_item_db_id];
+            update_post_meta( $menu_item_db_id, '_menu_item_is_mega_menu_parent', $is_mega_menu_parent_value );
 
         }
 

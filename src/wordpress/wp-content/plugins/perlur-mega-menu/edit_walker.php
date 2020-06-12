@@ -197,7 +197,13 @@ class Walker_Nav_Menu_Edit_PG extends Walker_Nav_Menu  {
                 </p>
                 <?php
 	            /* New fields insertion starts here */
-	            ?>      
+	            ?>   
+                <p class="field-custom description description-wide">
+	                <label for="edit-menu-item-is-mega-menu-parent-<?php echo $item_id; ?>">
+	                    <?php _e( 'Is mega menu parent' ); ?><br />
+	                    <input type="checkbox" id="edit-menu-item-is-mega-menu-parent-<?php echo $item_id; ?>" class="widefat code edit-menu-item-custom" name="menu-item-is-mega-menu-parent[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->is_mega_menu_item ); ?>" />
+	                </label>
+	            </p>
 	            <p class="field-custom description description-wide">
 	                <label for="edit-menu-item-is-mega-submenu-title-<?php echo $item_id; ?>">
 	                    <?php _e( 'Is mega submenu title' ); ?><br />
@@ -209,7 +215,7 @@ class Walker_Nav_Menu_Edit_PG extends Walker_Nav_Menu  {
 	                    <?php _e( 'Is mega menu item' ); ?><br />
 	                    <input type="checkbox" id="edit-menu-item-is-mega-menu-item-<?php echo $item_id; ?>" class="widefat code edit-menu-item-custom" name="menu-item-is-mega-menu-item[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->is_mega_menu_item ); ?>" />
 	                </label>
-	            </p>
+	            </p>   
                 <p class="field-custom description description-wide">
 	                <label for="edit-menu-item-mega-menu-description-<?php echo $item_id; ?>">
 	                    <?php _e( 'Mega menu description' ); ?><br />

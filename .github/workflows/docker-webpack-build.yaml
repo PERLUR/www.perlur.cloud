@@ -23,6 +23,5 @@ jobs:
           docker-compose exec -T web apt-get install -y nodejs
       - name: Build assets
         run: |
-          docker-compose exec -T web pushd src/wordpress/wp-content/themes/www_perlur_cloud/
+          docker-compose exec -T web cd src/wordpress/wp-content/themes/www_perlur_cloud/
           docker-compose exec -T web npm run-script build
-          docker-compose exec -T web popd

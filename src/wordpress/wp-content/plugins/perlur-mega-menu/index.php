@@ -51,13 +51,11 @@ class rc_perlur_mega_menu {
      * @return      void
     */
     public function rc_pg_update_custom_nav_fields( $menu_id, $menu_item_db_id, $args ) {
-        // error_log( implode('|', $_REQUEST['menu-item-is-mega-menu-parent']), 0 );
-        echo("HELLO");
+
         // Check if element is properly sent
         if ( is_array($_REQUEST['menu-item-is-mega-menu-parent'])) {
+            
             $is_mega_menu_parent_value = $_REQUEST['menu-item-is-mega-menu-parent'][$menu_item_db_id];
-            echo($is_mega_menu_parent_value);
-
             update_post_meta( $menu_item_db_id, '_menu_item_is_mega_menu_parent', $is_mega_menu_parent_value );
 
         } else {

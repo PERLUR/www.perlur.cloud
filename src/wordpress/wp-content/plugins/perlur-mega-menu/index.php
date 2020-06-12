@@ -3,9 +3,9 @@
 Plugin Name: Perlur theme bulma menu plugin
 Description: This plugin adds a custom field to menu.
 Version: 1.0
-Author: Perlur Group
-Author URI: https://www.perlurgroup.cloud
-License: GPL2
+Author: PERLUR Group
+Author URI: https://www.perlur.cloud
+License: AGPL-3.0-or-later
 */
 class rc_perlur_mega_menu {
 

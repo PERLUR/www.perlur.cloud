@@ -16,7 +16,7 @@ jobs:
       - name: Start Docker environment
         run: |
           ln -s docker-compose.local.yml docker-compose.yml
-          docker-compose  up
+          docker-compose up -d
       - name: Install NPM dependencies
         run:  |
           docker-compose exec web apt-get update

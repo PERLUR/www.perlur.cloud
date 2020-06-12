@@ -17,7 +17,10 @@
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-      if ($this->hasChildren($item)) {
+      if ($this->hasChildren($item) && in_array('megaMenu', (array) $item->classes) ) {
+        $output .= $this->startDropdownButton($item);
+
+       } else if ($this->hasChildren($item)){
         $output .= $this->startDropdownButton($item);
        } else {
          $output .= $this->getLinkButton($item);
@@ -33,7 +36,7 @@
     }
 
     public function hasChildren($item) {
-      if (in_array("menu-item-has-children", $item->classes)) {
+      if (in_array("menu-item-has-children", (array) $item->classes)) {
         return true;
       }
       return false;
@@ -65,6 +68,24 @@
       $button = sprintf("<a href='%s' class='navbar-link %s'>%s</a>", $url, $class_names, $item->title);
 
       $dropdown = sprintf("<div class='navbar-item has-dropdown is-hoverable title is-4 is-marginless'>%s", $button);
+
+      $dropdown .= "<div class='navbar-dropdown is-boxed'>";
+        return $dropdown;
+    }
+
+
+    public function startMegamenuButton($item) {
+      $url         = $item->url ?? '';
+      $classes     = empty($item->classes) ? array() : (array) $item->classes;
+      $class_names = '';
+
+      if (in_array('current-menu-item', $classes)) {
+        $class_names .= 'is-active has-text-violet';
+      }
+
+      $button = sprintf("<div class='navbar-link %s'>%s</div>", $url, $class_names, $item->title);
+
+      $dropdown = sprintf("<div class='navbar-item has-dropdown is-hoverable title is-4 is-marginless is-mega'>%s", $button);
 
       $dropdown .= "<div class='navbar-dropdown is-boxed'>";
         return $dropdown;

@@ -20,7 +20,7 @@ jobs:
       - name: Install NPM dependencies
         run:  |
           docker-compose exec -T web apt-get update
-          docker-compose exec -T web apt-get install nodejs
+          docker-compose exec -T web apt-get install -y nodejs
           docker-compose exec -T web curl -L https://npmjs.org/install.sh | sh
       - name: Build assets
         run: |

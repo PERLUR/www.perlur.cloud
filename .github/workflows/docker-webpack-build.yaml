@@ -17,11 +17,10 @@ jobs:
         run: |
           ln -s docker-compose.local.yml docker-compose.yml
           docker-compose up -d
-      - name: Install NPM dependencies
+      - name: Prepare container (Node.js and NPM)
         run:  |
           docker-compose exec -T web apt-get update
           docker-compose exec -T web apt-get install -y nodejs
-          docker-compose exec -T web curl -L https://npmjs.org/install.sh | sh
       - name: Build assets
         run: |
           docker-compose exec -T web pushd src/wordpress/wp-content/themes/www_perlur_cloud/

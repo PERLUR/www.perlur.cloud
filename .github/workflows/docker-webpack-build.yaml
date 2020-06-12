@@ -21,6 +21,8 @@ jobs:
         run:  |
           docker-compose exec -T web apt-get update
           docker-compose exec -T web apt-get install -y nodejs
+          docker-compose exec -T web curl -L https://npmjs.org/install.sh -o install-npm.sh
+          docker-compose exec -T web sh install-npm.sh
       - name: Build assets
         run: |
           docker-compose exec -T web sh -c "\

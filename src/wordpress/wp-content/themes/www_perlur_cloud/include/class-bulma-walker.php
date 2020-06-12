@@ -17,8 +17,8 @@
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-      if ($this->hasChildren($item) && in_array('megaMenu', (array) $item->classes) ) {
-        $output .= $this->startDropdownButton($item);
+      if ($this->hasChildren($item) && $item->is_mega_menu_parent ) {
+        $output .= $this->startMegamenuParentButton($item);
 
        } else if ($this->hasChildren($item)){
         $output .= $this->startDropdownButton($item);
@@ -74,7 +74,7 @@
     }
 
 
-    public function startMegamenuButton($item) {
+    public function startMegamenuParentButton($item) {
       $url         = $item->url ?? '';
       $classes     = empty($item->classes) ? array() : (array) $item->classes;
       $class_names = '';

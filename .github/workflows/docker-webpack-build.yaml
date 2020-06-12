@@ -1,0 +1,26 @@
+on: 
+  push:
+  pull_request:
+    branches:
+      - 'master'
+
+name: Test Docker build
+
+jobs:
+  frontend-build:
+    name: Build frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Start Docker environment
+        run: docker-compose -f docker-compose.local.yaml up
+      - name: Install NPM dependencies
+        run:  |
+          docker-compose exec web apt-get update
+          docker-compose exec web curl -L https://npmjs.org/install.sh | sh
+      - name: Build assets
+        run: |
+          docker-compose exec web pushd src/wordpress/wp-content/themes/www_perlur_cloud/
+          docker-compose exec web npm run-script build
+          docker-compose exec web popd

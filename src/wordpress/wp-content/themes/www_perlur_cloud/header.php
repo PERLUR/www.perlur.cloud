@@ -107,19 +107,19 @@
           </div>
           <div class="navbar-menu" id="HeaderMenu">
             <div class="navbar-end">
-              <?php
-                wp_nav_menu(
-                  array (
-                  'menu'           => 'header-menu',
-                  'theme_location' => 'header-menu',
-                  'container'      => false,
-                  'walker'         => new Bulma_Nav_Walker(),
-                  'items_wrap'     => '%3$s',
-                  )
-                );
-              ?>
-            </div>
-            <div class="navbar-end">
+              <div id="menu-items" class="navbar-end">
+                <?php
+                  wp_nav_menu(
+                    array (
+                    'menu'           => 'header-menu',
+                    'theme_location' => 'header-menu',
+                    'container'      => false,
+                    'walker'         => new Bulma_Nav_Walker(),
+                    'items_wrap'     => '%3$s',
+                    )
+                  );
+                ?>
+              </div>
               <a class="navbar-item" href="https://www.facebook.com/perlurgroup/">
                 <i class="fab fa-facebook-square title"></i>
               </a>
@@ -134,6 +134,7 @@
               </a>
             </div>
           </div>
+
         </nav>
         <!-- END HEADER NAV -->
       </div>

@@ -114,7 +114,7 @@
 
       $dropdown = sprintf("<div class='navbar-item has-dropdown is-hoverable title is-4 is-marginless is-mega'>%s", $button);
 
-      $dropdown .= "<div class='navbar-dropdown mega-dropdown'><div class='container is-fluid'><div class='columns'>";
+      $dropdown .= "<div class='navbar-dropdown mega-dropdown'><div class='container is-fluid'><div class='columns is-pulled-right'>";
         return $dropdown;
     }
 

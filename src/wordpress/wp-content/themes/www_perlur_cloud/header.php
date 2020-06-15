@@ -90,7 +90,7 @@
     <header>
       <div>
         <!-- START HEADER NAV -->
-        <nav class="navbar">
+        <nav class="navbar is-spaced">
           <div class="navbar-brand">
             <!-- navbar items, navbar burger... -->
             <a href="<?php echo get_bloginfo('url'); ?>">
@@ -106,7 +106,7 @@
             </div>
           </div>
           <div class="navbar-menu" id="HeaderMenu">
-            <div class="navbar-start">
+            <div class="navbar-end">
               <?php
                 wp_nav_menu(
                   array (
@@ -118,7 +118,8 @@
                   )
                 );
               ?>
-
+            </div>
+            <div class="navbar-end">
               <a class="navbar-item" href="https://www.facebook.com/perlurgroup/">
                 <i class="fab fa-facebook-square title"></i>
               </a>

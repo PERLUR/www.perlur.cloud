@@ -90,7 +90,7 @@
     <header>
       <div>
         <!-- START HEADER NAV -->
-        <nav class="navbar is-spaced">
+        <nav class="navbar is-spaced" role="navigation" aria-label="dropdown main navigation">
           <div class="navbar-brand">
             <!-- navbar items, navbar burger... -->
             <a href="<?php echo get_bloginfo('url'); ?>">
@@ -99,7 +99,7 @@
                    style="height: 100px;"
               />
             </a>
-            <div class="navbar-burger burger" data-target="HeaderMenu">
+            <div class="navbar-burger burger" data-target="HeaderMenu" aria-label="menu" aria-expanded="false">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>

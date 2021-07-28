@@ -22,7 +22,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "mini-css-extract-plugin": "^1.4.1",
     "node-sass": "^5.0.0",
-    "npm": "^7.9.0",
+    "npm": "^7.20.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",

@@ -18,7 +18,7 @@
   "devDependencies": {
     "bulma": "^0.9.3",
     "copy-webpack-plugin": "^6.4.1",
-    "css-loader": "^6.6.0",
+    "css-loader": "^6.7.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "mini-css-extract-plugin": "^2.5.3",
     "node-sass": "^7.0.1",

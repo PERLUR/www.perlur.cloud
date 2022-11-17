@@ -20,7 +20,7 @@
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^6.7.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "mini-css-extract-plugin": "^2.5.3",
+    "mini-css-extract-plugin": "^2.7.0",
     "node-sass": "^7.0.1",
     "npm": "^8.5.4",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
